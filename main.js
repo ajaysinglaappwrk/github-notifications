@@ -60,7 +60,7 @@ async function main() {
             to: "audry.s@appwrk.com",
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
-            subject: "EMAIL CI CD CONTENT",
+            subject: "Pipeline completed sucessfully!!!!!",
              text: "Hi There , It's working",
             // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
