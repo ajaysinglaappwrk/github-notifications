@@ -16,6 +16,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Send mail
-        if: steps.step1.outputs.status == 'failure'
+        if: steps.step1.outputs.status == 'success'
         uses: ./
       
