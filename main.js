@@ -61,7 +61,7 @@ async function main() {
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
             subject: "EMAIL CI CD CONTENT",
-            // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
+             text: "Hi There , It's working",
             // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
         })
