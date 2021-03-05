@@ -12,7 +12,10 @@ jobs:
    
     steps:
       - name: Checkout code
+        id: step1
         uses: actions/checkout@v2
+
       - name: Send mail
+        if: steps.step1.outputs.status == 'failure'
         uses: ./
       
