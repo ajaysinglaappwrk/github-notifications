@@ -49,7 +49,7 @@ jobs:
           subject: Email Notification from CI-CD
           body: ${{matrix.body}}
           to: ${{github.event.pusher.email}}
-          from: github-actions
+          from: direct@spincv.com
           content_type: ${{matrix.content_type}}
           convert_markdown: ${{matrix.convert_markdown}}
           attachments: ${{matrix.attachments}}
