@@ -62,7 +62,7 @@ async function main() {
             // bcc: bcc ? bcc : undefined,
             subject: "Pipeline completed sucessfully!!!!!",
              text: "Hi There , It's working!! Testing Email!",
-            // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
+             html: "<h2>Hi Client, Pipeline is passed, <a href='https://spincv.com'>Click here</a>",
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
         })
     } catch (error) {
