@@ -61,7 +61,7 @@ async function main() {
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
             subject: "EMAIL CI CD CONTENT ABC",
-            text: "Hi There, Pipeline is passed",
+            // text: "Hi There, Pipeline is passed",
             // html: "<h4>Hi There, Pipeline is passed</h4>"
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
         })
