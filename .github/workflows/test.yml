@@ -9,33 +9,7 @@ on:
 jobs:
   main:
     runs-on: windows-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        include:
-          - content_type: text/markdown
-            attachments: action.yml
-            body: file://README.md
-          - content_type: text/html
-            attachments: package.json,package-lock.json
-            body: |
-              <!DOCTYPE html>
-              <html>
-              <body>
-              <h1>Heading</h1>
-              <p>Paragraph</p>
-              </body>
-              </html>
-          - content_type: text/html
-            convert_markdown: true
-            body: |
-              # h1
-              ## h2
-              ### h3
-              **bold**
-              _italics_
-              - bullet 1
-              - bullet 2
+   
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
