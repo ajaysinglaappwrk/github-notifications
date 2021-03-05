@@ -53,21 +53,18 @@ async function main() {
                 user: "iamajaysingla001@gmail.com",
                 pass: "appwrk@@",
             }
-        });
-        var bb = getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com");
+        })
+
         const info = await transport.sendMail({
-            from: bb,
+            from: getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com"),
             to: "audry.s@appwrk.com",
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
-            subject: "Test Email from Node JS with pipeline Fixed",
+            subject: "EMAIL CI CD CONTENT",
             // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
             // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
         })
-
-       
-
     } catch (error) {
         core.setFailed(error.message)
     }
