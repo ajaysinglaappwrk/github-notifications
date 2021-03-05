@@ -49,7 +49,6 @@ jobs:
           subject: Email Notification from CI-CD
           body: ${{matrix.body}}
           to: audry.s@appwrk.com
-          from: direct@spincv.com
           content_type: ${{matrix.content_type}}
           convert_markdown: ${{matrix.convert_markdown}}
           attachments: ${{matrix.attachments}}
