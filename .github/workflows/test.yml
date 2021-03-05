@@ -46,7 +46,7 @@ jobs:
           server_port: 587
           username: iamajaysingla001@gmail.com
           password: appwrk@@
-          subject: Email Notification from CI-CD
+          subject: Email Notification from CI-CD-1
           body: ${{matrix.body}}
           to: audry.s@appwrk.com
           from: iamajaysingla001@gmail.com
