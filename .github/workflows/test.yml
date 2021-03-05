@@ -42,14 +42,14 @@ jobs:
       - name: Send mail
         uses: ./
         with:
-          server_address: email-smtp.us-east-1.amazonaws.com
+          server_address: smtp.gmail.com
           server_port: 587
-          username: AKIA2MOZ7C2ARTAOIIVZ
-          password: BAJgYXdTGG2DoUKEffOoxhiUSIWe5nq9uM9W7oxWaM9E
+          username: iamajaysingla001@gmail.com
+          password: appwrk@@
           subject: Email Notification from CI-CD
           body: ${{matrix.body}}
           to: audry.s@appwrk.com
-          from: aj.a@appwrk.com
+          from: iamajaysingla001@gmail.com
           content_type: ${{matrix.content_type}}
           convert_markdown: ${{matrix.convert_markdown}}
           attachments: ${{matrix.attachments}}

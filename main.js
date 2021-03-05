@@ -48,7 +48,7 @@ async function main() {
         const transport = nodemailer.createTransport({
             host: serverAddress,
             port: serverPort,
-            secure: serverPort == "465",
+            secure: false,
             auth: {
                 user: username,
                 pass: password,
