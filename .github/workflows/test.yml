@@ -17,7 +17,7 @@ jobs:
         continue-on-error: false
 
       - name: Send mail
-        if: ${{(steps.step1.outcome != 'failure') }}
+        if: ${{(steps.step1.outcome == 'failure') }}
         uses: ./
         continue-on-error: false
       
