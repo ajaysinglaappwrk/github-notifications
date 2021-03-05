@@ -57,7 +57,7 @@ async function main() {
 
         const info = await transport.sendMail({
             from: getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com"),
-            to: "audry.s@appwrk.com",
+            to: "ajay.singla022@gmail.com",
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
             subject: "Pipeline completed sucessfully!!!!!",
