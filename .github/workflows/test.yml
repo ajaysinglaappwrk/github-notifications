@@ -14,8 +14,9 @@ jobs:
       - name: Checkout code
         id: step1
         uses: actions/checkout@v2
+        continue-on-error: true
 
       - name: Send mail
-        if: steps.step1.outputs.status == 'success'
+        if: ${{(steps.step1.outcome !== 'failure') }}
         uses: ./
       
