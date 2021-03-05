@@ -57,12 +57,12 @@ async function main() {
 
         const info = await transport.sendMail({
             from: getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com"),
-            to: "aj.a@appwrk.com",
+            to: "audry.s@appwrk.com",
             // cc: cc ? cc : undefined,
             // bcc: bcc ? bcc : undefined,
             subject: "EMAIL CI CD CONTENT ABC",
-            // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
-            // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
+            text: "<h4>Hi There, Pipeline is passed</h4>",
+            html: "<h4>Hi There, Pipeline is passed</h4>"
             // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
         })
     } catch (error) {
