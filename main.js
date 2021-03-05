@@ -54,26 +54,19 @@ async function main() {
                 pass: "appwrk@@",
             }
         });
+        var bb = getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com");
+        const info = await transport.sendMail({
+            from: bb,
+            to: "audry.s@appwrk.com",
+            // cc: cc ? cc : undefined,
+            // bcc: bcc ? bcc : undefined,
+            subject: "Test Email from Node JS with pipeline Fixed",
+            // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
+            // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
+            // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
+        })
 
-        await transport.verify(async function (error, success) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log("Server is ready to take our messages");
-                var bb = getFrom("Ajay Singla", "iamajaysingla001@gmail.com");
-                const info = await transport.sendMail({
-                    from: bb,
-                    to: "aj.a@appwrk.com",
-                    // cc: cc ? cc : undefined,
-                    // bcc: bcc ? bcc : undefined,
-                    subject: "Test Email from Node JS with pipeline Fixed",
-                    // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
-                    // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
-                    // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
-                })
-                return false;
-            }
-        });
+       
 
     } catch (error) {
         core.setFailed(error.message)
