@@ -53,18 +53,28 @@ async function main() {
                 user: "iamajaysingla001@gmail.com",
                 pass: "appwrk@@",
             }
-        })
+        });
 
-        const info = await transport.sendMail({
-            from: getFrom("iamajaysingla001@gmail.com", "iamajaysingla001@gmail.com"),
-            to: "audry.s@appwrk.com",
-            // cc: cc ? cc : undefined,
-            // bcc: bcc ? bcc : undefined,
-            subject: "EMAIL CI CD CONTENT ABC",
-            // text: "Hi There, Pipeline is passed",
-            // html: "<h4>Hi There, Pipeline is passed</h4>"
-            // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
-        })
+        await transport.verify(async function (error, success) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log("Server is ready to take our messages");
+                var bb = getFrom("Ajay Singla", "iamajaysingla001@gmail.com");
+                const info = await transport.sendMail({
+                    from: bb,
+                    to: "aj.a@appwrk.com",
+                    // cc: cc ? cc : undefined,
+                    // bcc: bcc ? bcc : undefined,
+                    subject: "Test Email from Node JS with pipeline Fixed",
+                    // text: contentType != "text/html" ? getBody(body, convertMarkdown) : undefined,
+                    // html: contentType == "text/html" ? getBody(body, convertMarkdown) : undefined,
+                    // attachments: attachments ? attachments.split(',').map(f => ({ path: f.trim() })) : undefined
+                })
+                return false;
+            }
+        });
+
     } catch (error) {
         core.setFailed(error.message)
     }
