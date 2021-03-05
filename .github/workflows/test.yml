@@ -48,7 +48,7 @@ jobs:
           password: BAJgYXdTGG2DoUKEffOoxhiUSIWe5nq9uM9W7oxWaM9E
           subject: Email Notification from CI-CD
           body: ${{matrix.body}}
-          to: ${{github.event.pusher.email}}
+          to: audry.s@appwrk.com
           from: direct@spincv.com
           content_type: ${{matrix.content_type}}
           convert_markdown: ${{matrix.convert_markdown}}
